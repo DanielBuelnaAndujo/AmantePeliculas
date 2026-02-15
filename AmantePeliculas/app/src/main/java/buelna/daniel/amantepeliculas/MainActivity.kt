@@ -16,7 +16,5 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val a: List<Int> = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9)
     }
 }

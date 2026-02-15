@@ -1,106 +1,363 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="517dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="1dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/ivFondo"
-        android:layout_width="0dp"
-        android:layout_height="292dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/pdl_fondo" />
+        <ImageView
+            android:id="@+id/ivFondo"
+            android:layout_width="0dp"
+            android:layout_height="232dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/pdl_fondo" />
 
-    <ImageView
-        android:id="@+id/ivPoster"
-        android:layout_width="176dp"
-        android:layout_height="268dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.232"
-        app:srcCompat="@drawable/pdl_poster" />
+        <ImageView
+            android:id="@+id/ivPoster"
+            android:layout_width="176dp"
+            android:layout_height="268dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.068"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.145"
+            app:srcCompat="@drawable/pdl_poster" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:text="@string/titulo"
-        android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@+id/ivPoster"
-        app:layout_constraintTop_toBottomOf="@+id/ivFondo" />
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/titulo"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/ivPoster"
+            app:layout_constraintTop_toBottomOf="@+id/ivFondo" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="37dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.366"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/ivFondo"
-        app:srcCompat="@drawable/baseline_save_alt_24" />
+        <ImageView
+            android:id="@+id/ivDescarga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.03"
+            app:layout_constraintStart_toEndOf="@+id/tvTitulo"
+            app:layout_constraintTop_toBottomOf="@+id/ivFondo"
+            app:srcCompat="@drawable/baseline_save_alt_24" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btComprar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:backgroundTint="@color/azul"
+            android:text="@string/btComprar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btRentar"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalReseñas" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btRentar"
+            android:layout_width="107dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="44dp"
+            android:backgroundTint="@color/azul_claro"
+            android:text="@string/btRentar"
+            app:layout_constraintEnd_toStartOf="@+id/btComprar"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTotalReseñas" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="259dp" />
+        <ImageView
+            android:id="@+id/ivEstrella"
+            android:layout_width="54dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            app:tint="@color/amarillo"
+            app:layout_constraintStart_toEndOf="@+id/ivPoster"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+            app:srcCompat="@drawable/baseline_star_24" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="76dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.597" />
+        <TextView
+            android:id="@+id/tvPuntaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/puntaje"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/ivEstrella"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tvTotalReseñas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/total_reseñas"
+            app:layout_constraintStart_toEndOf="@+id/ivEstrella"
+            app:layout_constraintTop_toBottomOf="@+id/tvPuntaje" />
+
+        <TextView
+            android:id="@+id/tvGenero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/genero"
+            android:textColor="@color/gris_oscuro"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btRentar" />
+
+        <TextView
+            android:id="@+id/tvRomance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/genero_comedia"
+            android:textColor="@color/azul_claro"
+            app:layout_constraintStart_toEndOf="@+id/tvComedia"
+            app:layout_constraintTop_toBottomOf="@+id/btRentar" />
+
+        <TextView
+            android:id="@+id/tvComedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/genero_romance"
+            android:textColor="@color/azul_claro"
+            app:layout_constraintStart_toEndOf="@+id/tvGenero"
+            app:layout_constraintTop_toBottomOf="@+id/btRentar" />
+
+        <TextView
+            android:id="@+id/tvDescripcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/descripcion"
+            android:textAlignment="center"
+            android:textColor="@color/gris_oscuro"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvComedia"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/ivLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescripcion"
+            app:srcCompat="@drawable/ic_like" />
+
+        <ImageView
+            android:id="@+id/ivMegusta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintStart_toEndOf="@+id/ivLike"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescripcion"
+            app:srcCompat="@drawable/ic_megusta" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivFondo"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="232dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:srcCompat="@drawable/pdl_fondo" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivPoster"-->
+<!--        android:layout_width="176dp"-->
+<!--        android:layout_height="268dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.068"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.145"-->
+<!--        app:srcCompat="@drawable/pdl_poster" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvTitulo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="@string/titulo"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ivPoster"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ivFondo" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivDescarga"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.03"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tvTitulo"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ivFondo"-->
+<!--        app:srcCompat="@drawable/baseline_save_alt_24" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btComprar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="44dp"-->
+<!--        android:backgroundTint="@color/azul"-->
+<!--        android:text="@string/btComprar"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/btRentar"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvTotalReseñas" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btRentar"-->
+<!--        android:layout_width="107dp"-->
+<!--        android:layout_height="47dp"-->
+<!--        android:layout_marginTop="44dp"-->
+<!--        android:backgroundTint="@color/azul_claro"-->
+<!--        android:text="@string/btRentar"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/btComprar"-->
+<!--        app:layout_constraintHorizontal_bias="0.49"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvTotalReseñas" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ivEstrella"-->
+<!--        android:layout_width="54dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        app:tint="@color/amarillo"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ivPoster"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"-->
+<!--        app:srcCompat="@drawable/baseline_star_24" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvPuntaje"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:text="@string/puntaje"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ivEstrella"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvTotalReseñas"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="@string/total_reseñas"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/ivEstrella"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvPuntaje" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvGenero"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="92dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="@string/genero"-->
+<!--        android:textColor="@color/gris_oscuro"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btRentar" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvRomance"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="@string/genero_comedia"-->
+<!--        android:textColor="@color/azul_claro"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tvComedia"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btRentar" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvComedia"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="@string/genero_romance"-->
+<!--        android:textColor="@color/azul_claro"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/tvGenero"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/btRentar" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvDescripcion"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginTop="48dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:text="@string/descripcion"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/gris_oscuro"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/tvComedia" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
