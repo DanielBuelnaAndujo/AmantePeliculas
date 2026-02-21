@@ -3,5 +3,9 @@
     <style name="Base.Theme.AmantePeliculas" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/negro_claro</item>
+        <item name="android:colorBackground">@color/negro_claro</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnBackground">@color/negro_claro</item>
     </style>
 </resources>

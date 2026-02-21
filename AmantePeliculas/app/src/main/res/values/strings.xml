@@ -11,4 +11,9 @@
     <string name="descripcion">
         Barry, un hombre solitario y poco sociable, se educó sobreprotegido por sus siete hermanos. Desafortunado en el amor, se apasiona por una mujer misteriosa a quien conoce a través de su hermana, pero su vida se complica cuando intentan extorsionarlo.
     </string>
+
+    <string name="titulo_login">Iniciar sesión</string>
+    <string name="contraeñaOlvidada_login">¿Olvidaste tu contraseña?</string>
+    <string name="entrada_login">Entrar</string>
+    <string name="noCuenta_login">¿No tienes cuenta?</string>
 </resources>
